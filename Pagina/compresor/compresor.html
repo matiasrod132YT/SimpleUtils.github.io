@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Compresor de imagen | Matias</title>
+    <link rel="icon" type="imagen/png" href="../imagenes/logo.png">
+    <link rel="stylesheet" href="compresor.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="compresor.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="upload-box">
+        <input type="file" accept="image/*" hidden>
+        <img><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)"><path d="M18.944 11.112C18.507 7.67 15.56 5 12 5 9.244 5 6.85 6.611 5.757 9.15 3.609 9.792 2 11.82 2 14c0 2.757 2.243 5 5 5h11c2.206 0 4-1.794 4-4a4.01 4.01 0 0 0-3.056-3.888zM13 14v3h-2v-3H8l4-5 4 5h-3z"></path></svg></img>
+        <p>Archivo para cargar</p>
+      </div>
+      <div class="content">
+        <div class="row sizes">
+          <div class="column width">
+            <label>Ancho</label>
+            <input type="number">
+          </div>
+          <div class="column height">
+            <label>Alto</label>
+            <input type="number">
+          </div>
+        </div>
+        <div class="row checkboxes">
+          <div class="column ratio">
+            <input type="checkbox" id="ratio" checked>
+            <label for="ratio">Bloquear relación de aspecto</label>
+          </div>
+          <div class="column quality">
+            <input type="checkbox" id="quality">
+            <label for="quality">Reducir la calidad</label>
+          </div>
+        </div>
+        <button class="download-btn">Download Image</button>
+      </div>
+    </div>
+  </body>
+</html>

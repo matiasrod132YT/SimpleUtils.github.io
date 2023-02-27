@@ -1,0 +1,48 @@
+<html lang="es">
+<head>
+    <title>Calculadora | Matias</title>
+    <link rel="icon" type="imagen/png" href="../imagenes/logo.png">
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+    <div class="container">
+        <form action="" class="calc">
+            <input type="text" class="value" id="result">
+            <span class="num clear" onclick="clears()"><i>C</i></span>
+            <nada></nada>
+            <span class="num" onclick="view('/')" value="/"><i>/</i></span>
+            <span class="num" onclick="view('7')" value="7"><i>7</i></span>
+            <span class="num" onclick="view('8')" value="8"><i>8</i></span>
+            <span class="num" onclick="view('9')" value="9"><i>9</i></span>
+            <span class="num" onclick="view('*')" value="*"><i>*</i></span>
+            <span class="num" onclick="view('4')" value="4"><i>4</i></span>
+            <span class="num" onclick="view('5')" value="5"><i>5</i></span>
+            <span class="num" onclick="view('6')" value="6"><i>6</i></span>
+            <span class="num" onclick="view('-')" value="-"><i>-</i></span>
+            <span class="num" onclick="view('1')" value="1"><i>1</i></span>
+            <span class="num" onclick="view('2')" value="2"><i>2</i></span>
+            <span class="num" onclick="view('3')" value="3"><i>3</i></span>
+            <span class="num plus" onclick="view('+')" value="+"><i>+</i></span>
+            <span class="num" onclick="view('0')" value="0"><i>0</i></span> 
+            <span class="num" onclick="view('.')" value="."><i>.</i></span>
+            <span class="num equals" onclick="compute()" value="="><i>=</i></span>
+        </form>
+    </div>
+    <script>
+        function view(num){
+            document.getElementById('result').value+=num;
+        }
+        function compute(){
+            let a=document.getElementById('result').value;
+            b=eval(a)
+            if (b === " ") {
+                document.getElementById('result').value=""
+            } 
+            document.getElementById('result').value=b;
+        }
+        function clears(){
+            document.getElementById('result').value=""
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100v;
+    background: #333;
+    font-family: "poppins",sans-serif;
+}
+.container{
+    position: relative;
+    min-width: 300px;
+    min-height: 400px;
+    border-radius: 30px;
+    box-shadow: 25px 20px 75px rgba(0,0,0,0.25),
+   10px 10px 70px rgba(0,0,0,.5),
+   inset 5px 5px 15px rgba(0,0,0,.5),inset
+   -5px -5px 15px
+   rgba(0,0,0,.5);
+   padding: 40px 30px 30px;
+}
+.calc{
+    position: relative;
+    display: grid;
+}
+.value{
+    position: relative;
+    grid-column: span 4;
+    height: 100px;
+    width: calc(100% - 20px);
+    left: 0;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    background-color: #a7af7c;
+    box-shadow: 0 0 2px rgba(0,0,0,.75);
+    text-align: right;
+    font-size: 2rem;
+    padding: 10px;
+}
+.calc span{
+    color: #fff;
+    position: relative;
+    display: grid;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(
+        180deg, #2f2f2f, #3f3f3f
+    );
+    box-shadow: inset 8px 0 8px rgba(0,0,0,.15),
+    inset 0 -8px 8px rgba(0,0,0,.25),
+    inset 0 0 0 2px rgba(0,0,0,.75),
+    10px 20px 25px rgba(0,0,0,.4);
+    place-items: center;
+    margin: 8px;
+    border-radius: 10px;
+}
+.calc span:active{
+    filter: brightness(1.5);
+}
+.calc span::before{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 10px;
+    right: 12px;
+    background-color: linear-gradient(90deg,
+    #2f2f2f, #4d4d4d);
+    border-radius: 10px;
+    box-shadow: -5px -5px -5px rgba(0,0,0,0.1),
+    10px 5px 10px rgba(0,0,0,.15);
+    border-top:1px solid #0009;
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+}
+.calc span i{
+    position: relative;
+    font-size:  2rem;
+    cursor: pointer;
+    font-style: normal;
+}
+
+span.clear{
+    grid-column: span 2;
+    width: 170px;
+    background: #d52121;
+}
+span.clear::before{
+    background-color: linear-gradient(90deg,
+    #d52121, #ffffff56);
+    border-left: 1px solid #fff4;
+    border-top: 1px solid #fff9;
+    border-bottom: 1px solid #fff4;
+}
+ 
+span.plus{
+    grid-row: span 2;
+    height: 175px;
+}
+
+span.equals{
+    background: #2396f3;
+}
+span.equals::before{
+    background: linear-gradient(90deg,
+    #1479c9, #ffffff56);
+    border-left: 1px solid #fff4;
+    border-top: 1px solid #fff9;
+    border-bottom: 1px solid #fff4;
+}
